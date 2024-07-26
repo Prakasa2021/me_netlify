@@ -1,54 +1,487 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<link rel="stylesheet" href="mycss.css">
-	<nav class="navbar fixed-top navbar-expand-lg" style="background-color: #FFF; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
-		<div class="container-fluid" style="font-size: 0.78em">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-			  <ul class="navbar-nav mx-auto">
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Portofolio</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Skills</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">About</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Contact</a>
-				</li>
-			  </ul>
-			</div>
-		</div>
-	</nav>
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-	<img src="images/my_photo.jpg" class="center" alt="my_photo">
-	<div class="project">
-	  <div class="prototype-box">
-		<div style="font-family: 'Brush Script MT', cursive;">
-			<h4 style="color: #343d46">Hello, I'm Muhammad Tito Yudha Prakasa</h4>
-			<h5 style="color: #65737e">Game Dev Enthusiast & Mobile App Interest</h5>
-			<p style="color: #a7adba">I am a 5th semester student at Dian Nuswantoro University Semarang who wants to become a Game Developer, I am also interested in Mobile App.</p>
-		</div>
-	  </div>
-	</div>
-		<div class="project">
-	  <div class="prototype-box">
-		1
-	  </div>
-	</div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <nav id="desktop-nav">
+    <div class="logo"><b>Muhammad Tito Yudha Prakasa</b></div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Muhammad Tito Yudha Prakasa</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skill" onclick="toggleMenu()">Skill</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Portfolio</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Muhammad Tito Yudha Prakasa profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Muhammad Tito Yudha Prakasa</h1>
+      <p class="section__text__p2">Game Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Muhammad Tito Yudha Prakasa_CV.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://linkedin.com/in/mtitoypraks'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/Prakasa2021'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>1+ years <br />Game Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Bachelor of Informatics Engineering (B.Sc. in CS)</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p style="text-align: justify;">
+            Hobbies playing games and enthusiastic to participate in developing a game in the game industry, in a few
+            months have participated in game development either in freelance projects or internships and have developed
+            several game prototypes that include 2D and 3D games, which are found in the GitHub account. Likes to take
+            the initiative in creating different gameplay than usual with inspiration obtained from old era games that
+            are more interesting in terms of gameplay.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skill">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Game Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Unity3D</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Skill icon" class="icon" />
+              <div>
+                <h3>Unity2D</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Skill icon" class="icon" />
+              <div>
+                <h3>C#</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Skill icon" class="icon" />
+              <div>
+                <h3>Multiplayer</h3>
+                <p>Entry</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Skill icon" class="icon" />
+              <div>
+                <h3>2D/3D Animation</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Skill icon" class="icon" />
+              <div>
+                <h3>Responsive UI</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Portfolio</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Grimoire of Arcturus</h2>
+          <div class="article-container">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/goa1.jpg" alt="Project 1" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/goa2.jpg" alt="Project 1" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/goa3.jpg" alt="Project 1" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/goa4.jpg" alt="Project 1" class="rounded d-block w-100" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div>
+            <h3>Description</h3>
+            <p style="text-align: justify;">Telling the story of a world that has been destroyed and filled with
+              monsters,
+              the Grimoire of Arcturus is
+              a magical book that can cast spells to defeat enemies during the journey to find the obelisks.
+
+              Players are required to find and activate four obelisks, so that the gate to the Tower of Arcturus can be
+              opened. During their search, players will be accompanied by a companion named Wy-E, who helps illuminate
+              the
+              darkness of the adventure.
+            </p>
+          </div>
+          <br>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/hxnmi/Grimoire-of-Arcturus'">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Eazy Golf</h2>
+          <div class="article-container">
+            <div id="carouselExampleFade2" class="carousel carousel-dark slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/golf1.jpg" alt="Project 2" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/golf2.jpg" alt="Project 2" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/golf3.jpg" alt="Project 2" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/golf4.jpg" alt="Project 2" class="rounded d-block w-100" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div>
+            <h3>Description</h3>
+            <p style="text-align: justify;">Enjoy challenging and unique golf courses in Eazy Golf. There are 4 levels
+              with set obstacles and difficulty levels.
+
+              In this game, players play like in a traditional golf game but with some different aspects. Relax and
+              enjoy the game –that's Eazy Golf.
+            </p>
+          </div>
+          <br>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Prakasa2021/Mini-Golf'">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Rock Paper Scissor</h2>
+          <div class="article-container">
+            <div id="carouselExampleFade3" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/rps1.jpg" alt="Project 3" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/rps2.jpg" alt="Project 3" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/rps3.jpg" alt="Project 3" class="rounded d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/rps4.jpg" alt="Project 3" class="rounded d-block w-100" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade3"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade3"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div>
+            <h3>Description</h3>
+            <p style="text-align: justify;">Rock Paper Scissors (RPS) is a game based on the traditional game but with
+              more attractive character designs.
+
+              As players, we will face opponents controlled by bots that have their own strategic selection mechanisms.
+              Both players will compete until one player's three health points are depleted.
+            </p>
+          </div>
+          <br>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Prakasa2021/Rock-Paper-Scissor-Game'">
+              Github
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Sinner Run!</h2>
+          <div class="article-container">
+            <div id="carouselExampleFade4" class="carousel carousel-dark slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/sr1.jpg" alt="Project 4" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/sr2.jpg" alt="Project 4" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/sr3.jpg" alt="Project 4" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/sr4.jpg" alt="Project 4" class="rounded mx-auto d-block w-50" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade4"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade4"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div>
+            <h3>Description</h3>
+            <p style="text-align: justify;">Sinner Run is an endless runner game where players focus on avoiding
+              obstacles as the character's running speed increases over time.
+
+              In this game, players survive as long as possible while passing through obstacles to achieve the
+              highest
+              score. There are also coins that can be collected and exchanged for skins in the shop. Additionally,
+              there
+              are buffs that players can pick up, providing temporary invincibility against obstacles.
+            </p>
+          </div>
+          <br>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Prakasa2021/Project-Capstone-Endless-Run'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://wurfdoppio.itch.io/sinnerrun'">
+              Itch.io
+            </button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Dental Education</h2>
+          <div class="article-container">
+            <div id="carouselExampleFade5" class="carousel carousel-dark slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/gep1.jpg" alt="Project 5" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/gep2.jpg" alt="Project 5" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/gep3.jpg" alt="Project 5" class="rounded mx-auto d-block w-100" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/gep4.jpg" alt="Project 5" class="rounded mx-auto d-block w-100" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade5"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade5"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div>
+            <h3>Description</h3>
+            <p style="text-align: justify;">Dental Education is an interactive game about proper tooth
+              brushing techniques.
+
+              There are no objectives required in this game; it simply involves user interaction with the available
+              mini-games, such as selecting the correct technique for brushing specific parts of the teeth. There is
+              also an interactive book containing information about dental health.
+            </p>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Gigi Edukasi</h2>
+          <div class="article-container">
+            <div id="carouselExampleFade6" class="carousel carousel-dark slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/ge1.jpg" alt="Project 6" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/ge2.jpg" alt="Project 6" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/ge3.jpg" alt="Project 6" class="rounded mx-auto d-block w-50" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/ge4.jpg" alt="Project 6" class="rounded mx-auto d-block w-50" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade6"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade6"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div>
+            <h3>Description</h3>
+            <p style="text-align: justify;">Gigi Edukasi is a tooth brushing simulation game designed for children.
+
+              The objective of this game is quite simple: clean all the dirt off the teeth before time runs out and
+              proceed to the next level. There are videos using sign language aimed at deaf children, allowing them to
+              understand the purpose of the game.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon email-icon" />
+        <p><a href="mailto:muhammadtito2001@gmail.com">muhammadtito2001@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/mtitoypraks">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Muhammad Tito Yudha Prakasa. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
